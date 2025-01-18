@@ -74,7 +74,8 @@ function checkVictory() {
         /* Нестрогое сравнение, так как innerHTML -- строка. */
         if (tiles[i].innerHTML != n) return;    // Если костяшка не на месте, выход
     }
-    document.getElementById("modal").classList.add("modal--visible"); // Показываем модальное окно при победе
+    shuffled = false;       
+    shuffleTiles()
 }
 
 // Обработчик клика по костяшке
@@ -120,7 +121,7 @@ function animateTiles() {
 
 // Перемешивает костяшки случайным образом
 function shuffleTiles() {
-    for (let i = 0; i < 1000; ++i) {
+    for (let i = 0; i < 20; ++i) {
         let index = Math.floor(Math.random() * tiles.length); // Случайный индекс
         tiles[index].click();                                 // Симулируем клик
     }
