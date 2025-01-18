@@ -121,7 +121,7 @@ function animateTiles() {
 
 // Перемешивает костяшки случайным образом
 function shuffleTiles() {
-    for (let i = 0; i < 20; ++i) {
+    for (let i = 0; i < 10; ++i) {
         let index = Math.floor(Math.random() * tiles.length); // Случайный индекс
         tiles[index].click();                                 // Симулируем клик
     }
